@@ -1,0 +1,1 @@
+This is a simple Sinatra app which takes a location as an address and converts it into Lat / Lng using GeoCoder. It then displays the location on a map.
