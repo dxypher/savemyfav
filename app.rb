@@ -62,3 +62,7 @@ delete '/:id' do
   n.destroy
   redirect '/'
 end
+
+get '/favicon.ico' do
+  favicon.ico
+end
