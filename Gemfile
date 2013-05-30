@@ -3,3 +3,4 @@ gem 'sinatra'
 gem 'sinatra/activerecord'
 gem 'geocoder'
 gem "geocoder/railtie"
+gem "haml"

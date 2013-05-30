@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'geocoder'
 require "geocoder/railtie"
+require "haml"
 Geocoder::Railtie.insert
 
 SITE_TITLE = "SaveMyFavs"
