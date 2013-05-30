@@ -4,3 +4,4 @@ gem 'geocoder'
 gem "haml"
 gem 'sinatra-activerecord'
 gem 'activerecord', :require => "active_record"
+gem "pg"
