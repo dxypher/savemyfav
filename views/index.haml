@@ -1,0 +1,22 @@
+%header
+  %h1.title
+  Save Your Favorite Locations
+%section#add
+  %form(action="/" method="post")
+    %input(name="name" placeholder="Name of location")
+    %input(name="address" placeholder="Address")
+    %input(type="submit" value="Save Favorite Location!" class="submit")
+
+#accordion
+  - @locations.each do |location|
+    %h3
+      = location.name
+    %div.map  
+      %p
+        %h3.address
+          = location.address
+        %img(src="http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{location.latitude}%2C#{location.longitude}")
+      %span.edit
+        %a(href="/#{location.id}") edit
+      %span.delete
+        %a(href="/#{location.id}/delete") delete

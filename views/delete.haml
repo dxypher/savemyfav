@@ -1,0 +1,15 @@
+- if @location
+  %p.delete 
+    Are you sure you want to delete the following location?: 
+    %p.address
+      %h3.delete
+        = "#{@location.name}:"
+        %br
+        = @location.address
+      %img.delete(src="http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}")
+  %form(action="/#{@location.id}" method="post")
+    %input(type="hidden" name="_method" value="delete")
+    %input.delete(type="submit" value="Yes, Delete It!")
+    %a.delete(href="/")Cancel
+- else
+  %p location not found.

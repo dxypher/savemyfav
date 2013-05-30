@@ -1,0 +1,11 @@
+- if @location
+  %h2
+    Edit:
+    = @location.name
+  %form#edit(action="/#{@location.id}" method="post")
+    %input(type="hidden" name="_method" value="put")
+    %input(name="name" placeholder="Name of location")
+    %input(name="address" placeholder="Address")
+    %input(type="submit" value="Save Favorite Location!" class="submit")
+- else
+  %p location not found.
